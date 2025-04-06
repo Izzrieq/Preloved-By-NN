@@ -1,0 +1,1163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin-top: 80px;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    background: url('../assets/promo-1.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark opacity */
+    top: 0;
+    left: 0;
+}
+.edp-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    background: url('../assets/promo-2.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.overlay-edp {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark opacity */
+    top: 0;
+    left: 0;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 80%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+/* Style for the Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    z-index: 9999; /* On top of all other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    overflow: auto; /* Enable scrolling if the modal is too big */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: white;
+    margin: 15% auto; /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Set width of modal */
+    max-width: 400px; /* Maximum width for better responsiveness */
+    border-radius: 10px;
+}
+/* Custom Alert Modal */
+.custom-alert-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay background */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.custom-alert-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.custom-alert-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.custom-alert-content p {
+    margin-bottom: 20px;
+}
+
+.custom-alert-content button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.custom-alert-content button:hover {
+    background-color: #0056b3;
+}
+
+.custom-alert-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.alert-box {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    font-weight: bold;
+    display: none;
+    text-align: center;
+    z-index: 1000;
+}
+
+.alert-box.error {
+    background-color: #dc3545;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style the button */
+.log-btn {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline for anchor tag */
+}
+
+.log-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: white; 
+    background: transparent;
+    border: 2px solid white; 
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: white; /* Black fill on hover */
+    color:black; /* White text on hover */
+}
+
+.btn-update-cart {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: black; 
+    background: transparent;
+    border: 2px solid white; 
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.modal-update {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-update-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;  
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.modal-update h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.modal-update label {
+    font-weight: bold;
+}
+
+.modal-update select, .modal-update input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-update-cart {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-update-cart:hover {
+    background-color: #0056b3;
+}
+
+
+.edit-item{
+    color: black;
+    text-decoration: none;
+}
+/* Modal Overlay */
+#editModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+/* Modal Title */
+#editModal h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+/* Labels */
+#editModal label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Inputs and Select */
+#editModal input,
+#editModal select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Readonly Input */
+#editPrice {
+    background: #f3f3f3;
+    cursor: not-allowed;
+}
+
+/* Buttons */
+#editModal button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Update Cart Button */
+#editModal button[type="submit"] {
+    background: #007bff;
+    color: #fff;
+}
+
+#editModal button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Cancel Button */
+#editModal button[type="button"] {
+    background: #ccc;
+    color: #333;
+    margin-top: 10px;
+}
+
+#editModal button[type="button"]:hover {
+    background: #999;
+}
+
+/* Modal Background Overlay */
+#modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 999;
+}
+
+
+.btn-update-cart:hover {
+    background: cyan; /* Black fill on hover */
+    color:black; /* White text on hover */
+}
+
+.best-selling, .best-selling-tshirts {
+    padding: 50px;
+    text-align: center;
+}
+
+.best-selling h2, .best-selling-tshirts h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.perfume-list, .tshirt-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Common card styling */
+.perfume-card, .tshirt-card {
+    width: 250px;
+    height: 350px; /* Fixed height for consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+/* Image container */
+.perfume-img, .tshirt-img {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.perfume-img img, .tshirt-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.perfume-overlay, .tshirt-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Initially transparent */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.perfume-card:hover .perfume-overlay, .tshirt-card:hover .tshirt-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+}
+
+.perfume-card:hover img, .tshirt-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Price styling */
+.perfume-price, .tshirt-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Buy Now button */
+.buy-now {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.buy-now:hover {
+    background: white;
+    color: black;
+}
+
+/* Add to Cart icon */
+.add-cart {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.add-cart:hover {
+    color: #f4a261; /* Orange shade */
+}
+
+
+/* Price stays at the bottom */
+.perfume-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Product Details Section */
+.product-details {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Product Container: Flexbox layout */
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+/* Product Image: Left Side */
+.product-img {
+    flex: 1;
+    max-width: 500px;
+}
+
+.product-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Info: Right Side */
+.product-info {
+    flex: 1;
+    max-width: 500px;
+}
+
+.product-info h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Size and Quantity Selection */
+.product-size, .product-quantity {
+    margin-bottom: 20px;
+}
+
+.product-size label, .product-quantity label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.product-size select, .product-quantity input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.product-size select:focus, .product-quantity input:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+/* Add to Cart Button Style */
+.add-to-cart {
+    margin: 5px 0;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    border-color: #007bff;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;  
+    color: white;
+}
+.buy-now-details {
+    margin: 5px 0;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    border-color: #02b602;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-now-details:hover {
+    background-color: #02b602;  
+    color: white;
+}
+
+/* Hot Selling Section */
+.hot-selling {
+    margin-top: 40px;
+}
+
+.hot-selling h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hot-selling-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hot-selling-item {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hot-selling-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hot-selling-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.hot-selling-item h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hot-selling-item p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.hot-selling-item .view-details {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(133, 133, 133);
+    text-decoration: none;
+}
+
+.hot-selling-item .view-details:hover {
+    text-decoration: underline;
+    color: #f4a261;
+}
+
+/* Cart Page Styles */
+.cart-container {
+    padding: 80px 20px;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.cart-item-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cart-item-price, .cart-item-size, .cart-item-quantity {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.cart-item-actions .remove-item {
+    color: red;
+    text-decoration: none;
+}
+
+.cart-total {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.total-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.checkout-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.checkout-btn:hover {
+    background-color: #0056b3;
+}
+
+.cart-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* checkout.css */
+.checkout {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.checkout-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.checkout-items table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.checkout-items th, .checkout-items td {
+    padding: 10px;
+    text-align: left;
+}
+
+.checkout-items th {
+    background-color: #f4f4f4;
+}
+
+.checkout-total h4 {
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.checkout-payment {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.checkout-payment h3 {
+    margin-bottom: 15px;
+}
+
+.checkout-payment input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkout-submit button {
+    width: 100%;
+    padding: 10px;
+    border-color: #007bff;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-submit button:hover {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+.checkout-items a.remove-item {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.checkout-items a.remove-item:hover {
+    color: #ff3333;
+    text-decoration: underline;
+}
+
+.print-receipt-btn{
+    padding: 10px 20px;
+    border-color: #02b602;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.print-receipt-btn:hover{
+    background-color: #008000;
+    color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.submit-payment-btn{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.checkout-payment select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+#addCardBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Modal Content */
+#addCardModalUnique .modal-content {
+    background: #fff;
+    width: 350px;
+    padding: 20px;
+    margin: 10% auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+#addCardModalUnique .modal-content .close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+
+#addCardModalUnique .close:hover {
+    color: red;
+}
+
+/* Form Inputs */
+#addCardModalUnique .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+#addCardModalUnique .input-group label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#addCardModalUnique .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#addCardModalUnique .input-group input:focus {
+    border-color: #007bff;
+}
+
+/* Expiry & CVV in a row */
+#addCardModalUnique .input-row {
+    display: flex;
+    gap: 10px;
+}
+
+#addCardModalUnique .input-row .input-group {
+    flex: 1;
+}
+
+/* Save Button */
+#addCardModalUnique .save-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#addCardModalUnique .save-btn:hover {
+    background: #0056b3;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.profile-section {
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.card-section {
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.profile-section h2,
+.card-section h2 {
+    margin-bottom: 15px;
+}
+
+.profile-section label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.profile-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-section button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.profile-section button:hover {
+    background: #218838;
+}
+
+.card {
+    position: relative;
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.card-section .add-card-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.card-section button:hover {
+    background: #218838;
+}
+
+.delete-card {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.delete-card i {
+    font-size: 20px;
+}
+
+.delete-card:hover {
+    color: darkred;
+}
+
+.card-number {
+    font-size: 16px;
+}
+
+.toggle-eye {
+    cursor: pointer;
+    margin-left: 8px;
+    color: #007bff;
+}
+
+.toggle-eye:hover {
+    color: #0056b3;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hot-selling-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hot-selling-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-info {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .product-img {
+        margin-bottom: 20px;
+    }
+}
