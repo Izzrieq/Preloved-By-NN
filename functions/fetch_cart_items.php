@@ -1,3 +1,4 @@
+<!-- fetch cart func start -->
 <?php
 session_start();
 include '../config/conn.php';
@@ -28,3 +29,4 @@ while ($row = $result->fetch_assoc()) {
 }
 
 echo json_encode(['cart' => $cartItems]);
+// fetch cart func end

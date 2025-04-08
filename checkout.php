@@ -1,3 +1,4 @@
+<!-- checkout php start -->
 <?php
 session_start();
 include 'config/conn.php';
@@ -176,3 +177,4 @@ $cardResult = mysqli_query($conn, $cardQuery);
 </body>
 
 </html>
+<!-- checkout php start -->

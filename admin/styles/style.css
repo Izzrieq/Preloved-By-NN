@@ -15,26 +15,26 @@ body {
 /* Sidebar */
 .sidebar {
     width: 250px;
-    background-color: #ffffff; /* Light background for minimalist look */
-    color: #333333; /* Dark text for contrast */
+    background-color: #ffffff; 
+    color: #333333; 
     padding-top: 20px;
     height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
     padding-left: 20px;
-    border-right: 2px solid #e0e0e0; /* Light border for subtle separation */
+    border-right: 2px solid #e0e0e0; 
 }
 
 .sidebar .logo {
-    margin-bottom: 20px; /* Space between the logo and the menu items */
+    margin-bottom: 20px; 
     text-align: center;
 }
 
 .sidebar .logo-img {
-    width: 80px; /* Adjust the size of the logo */
+    width: 80px; 
     height: auto;
-    opacity: 0.85; /* Slightly reduce opacity for a more subtle look */
+    opacity: 0.85; 
 }
 
 /* Sidebar links */
@@ -47,24 +47,24 @@ body {
 .sidebar ul li {
     padding: 15px;
     text-align: left;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    transition: background-color 0.3s ease; 
 }
 
 .sidebar ul li a {
-    color: #333333; /* Dark text */
+    color: #333333; 
     text-decoration: none;
     display: block;
     font-size: 18px;
-    transition: color 0.3s ease; /* Smooth text color change */
+    transition: color 0.3s ease; 
 }
 
 .sidebar ul li a:hover {
-    color: #f4a261; /* Change text color to blue on hover */
+    color: #f4a261; 
 }
 
 .sidebar ul li.active a {
     background-color: #2980b9;
-    color: #ffffff; /* White text when active */
+    color: #ffffff; 
 }
 
 /* Sidebar submenu (optional) */
@@ -83,11 +83,11 @@ body {
 
 /* Header */
 .header {
-    background-color: #ffffff; /* Light header for a clean look */
+    background-color: #ffffff; 
     color: #333333;
     padding: 10px;
     font-size: 20px;
-    border-bottom: 2px solid #e0e0e0; /* Light bottom border */
+    border-bottom: 2px solid #e0e0e0; 
 }
 
 .header .user-info {
@@ -332,13 +332,13 @@ th {
     color: #333;
 }
 .low-stock {
-    background-color: #f8d7da; /* Light red background */
-    border: 1px solid #f5c6cb; /* Light red border */
+    background-color: #f8d7da; 
+    border: 1px solid #f5c6cb; 
 }
 
 .low-stock h3,
 .low-stock .price {
-    color: #721c24; /* Dark red color for text */
+    color: #721c24; 
 }
 .low-stock ul {
     list-style: none;
@@ -398,7 +398,7 @@ button:hover {
 .btn-cancel {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #f44336; /* Red background for cancellation */
+    background-color: #f44336; 
     color: white;
     text-decoration: none;
     border-radius: 5px;

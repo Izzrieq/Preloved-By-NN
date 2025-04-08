@@ -1,3 +1,4 @@
+<!-- fetch sales item func start -->
 <?php
 include '../../config/conn.php';
 
@@ -41,3 +42,4 @@ if (mysqli_num_rows($result) > 0) {
 
 mysqli_stmt_close($stmt);
 mysqli_close($conn);
+//fetch sales items func end

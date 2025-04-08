@@ -1,3 +1,4 @@
+<!-- setting start -->
 <?php
 session_start();
 include '../config/conn.php';
@@ -62,3 +63,4 @@ $user = mysqli_fetch_assoc($result);
 </body>
 
 </html>
+<!-- setting end -->

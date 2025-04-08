@@ -1,3 +1,4 @@
+<!-- order start -->
 <?php
 
 include '../config/conn.php';
@@ -184,12 +185,12 @@ $orderDetailsResult = mysqli_query($conn, $orderDetailsQuery);
                         status: "success"
                     },
                     success: function(response) {
-                        console.log(response); // Log the response to check for errors
+                        console.log(response);
                         if (response.trim() == "success") {
                             alert("Payment status updated to 'Success'");
                             location.reload();
                         } else {
-                            alert("Error: " + response); // Show error message
+                            alert("Error: " + response);
                         }
                     },
                     error: function(xhr, status, error) {
@@ -203,3 +204,4 @@ $orderDetailsResult = mysqli_query($conn, $orderDetailsQuery);
 </body>
 
 </html>
+<!-- order end -->

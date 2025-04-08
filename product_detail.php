@@ -1,3 +1,4 @@
+<!-- product detail start -->
 <?php
 ob_start();
 session_start();
@@ -149,3 +150,4 @@ if (isset($_POST['add_to_cart']) || isset($_POST['buy_now'])) {
 </body>
 
 </html>
+<!-- product detail end -->

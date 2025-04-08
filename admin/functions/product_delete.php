@@ -1,3 +1,4 @@
+<!-- product delet func start -->
 <?php
 include '../../config/conn.php';
 
@@ -16,3 +17,4 @@ if (isset($_GET['product_id'])) {
 }
 
 mysqli_close($conn);
+//product delete func end

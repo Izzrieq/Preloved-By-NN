@@ -1,3 +1,4 @@
+<!-- get variant by size func start -->
 <?php
 include '../config/conn.php';
 
@@ -24,3 +25,4 @@ if ($row = mysqli_fetch_assoc($result)) {
 } else {
     echo json_encode(['success' => false, 'message' => '60ml variant not found.']);
 }
+// get variant by size func end

@@ -1,3 +1,4 @@
+<!-- contact form func start -->
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = htmlspecialchars($_POST['name']);
@@ -32,3 +33,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </script>";
   }
 }
+// contact form end

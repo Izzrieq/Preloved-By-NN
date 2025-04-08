@@ -1,3 +1,4 @@
+<!-- sales record start -->
 <?php
 include '../config/conn.php';
 session_start();
@@ -146,3 +147,4 @@ $salesResult = mysqli_query($conn, $salesQuery);
 </body>
 
 </html>
+<!-- sales record end -->

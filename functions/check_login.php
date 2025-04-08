@@ -1,3 +1,4 @@
+<!-- check login start -->
 <?php
 session_start();
 
@@ -8,3 +9,4 @@ $response = [
 
 header('Content-Type: application/json');
 echo json_encode($response);
+// check login end

@@ -1,3 +1,4 @@
+<!-- print receipt funct start -->
 <?php
 session_start();
 include '../config/conn.php';
@@ -155,3 +156,4 @@ echo "</tbody>
     </script>
 </body>
 </html>";
+//print receipt funct end

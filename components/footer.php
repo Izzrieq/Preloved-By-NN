@@ -7,10 +7,8 @@
     <title>Document</title>
 </head>
 <style>
-    /* Footer Styles */
     .footer {
         background-color: #f1f1f1;
-        /* Dark background */
         color: black;
         padding: 30px 0;
         text-align: center;
@@ -24,7 +22,6 @@
         margin: 0 auto;
         padding: 0 20px;
         flex-wrap: wrap;
-        /* Ensures it wraps on smaller screens */
     }
 
     .footer-logo img {
@@ -64,10 +61,8 @@
 
     .footer-social a:hover {
         color: #f4a261;
-        /* Highlight color on hover */
     }
 
-    /* Footer Bottom */
     .footer-bottom {
         margin-top: 20px;
         font-size: 0.9rem;

@@ -1,3 +1,4 @@
+<!-- remove from checkout func start -->
 <?php
 session_start();
 include '../config/conn.php';
@@ -25,3 +26,4 @@ if (isset($_GET['cart_id'])) {
     header("Location: ../checkout.php?error=invalid_request");
     exit();
 }
+//remove from checkout func end

@@ -1,3 +1,4 @@
+<!-- product edit start -->
 <?php
 include '../config/conn.php';
 error_reporting(E_ALL);
@@ -156,3 +157,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </body>
 
 </html>
+<!-- product edit end -->

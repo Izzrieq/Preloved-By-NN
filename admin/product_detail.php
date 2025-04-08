@@ -1,3 +1,4 @@
+<!-- product detail start -->
 <?php
 include '../config/conn.php';
 error_reporting(E_ALL);
@@ -95,3 +96,4 @@ if (!$product) {
 </body>
 
 </html>
+<!-- product detail end -->

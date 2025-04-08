@@ -1,3 +1,4 @@
+<!-- index start -->
 <?php
 session_start();
 include 'components/nav.php';
@@ -231,3 +232,4 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
 </body>
 
 </html>
+<!-- index end -->

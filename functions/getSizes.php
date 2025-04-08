@@ -1,3 +1,4 @@
+<!-- get size func start -->
 <?php
 include '../config/conn.php';
 
@@ -17,3 +18,4 @@ if (isset($_GET['product_id'])) {
 
     echo json_encode(['variants' => $variants]);
 }
+//get size func end

@@ -1,3 +1,4 @@
+<!-- customer start -->
 <?php
 include '../config/conn.php';
 
@@ -94,3 +95,4 @@ $result = mysqli_query($conn, $query);
 </body>
 
 </html>
+<!-- customer end -->

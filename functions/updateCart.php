@@ -1,3 +1,4 @@
+<!-- update cart func start -->
 <?php
 include '../config/conn.php';
 
@@ -57,3 +58,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 } else {
     echo json_encode(["success" => false, "error" => "Invalid request method"]);
 }
+//update cart func end

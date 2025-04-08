@@ -1,3 +1,4 @@
+<!-- term of service start -->
 <?php
 session_start();
 include 'components/nav.php';
@@ -89,3 +90,4 @@ include 'components/nav.php';
 </body>
 
 </html>
+<!-- term of service end -->

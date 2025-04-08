@@ -1,3 +1,4 @@
+<!-- womens wear start -->
 <?php
 session_start();
 include 'components/nav.php';
@@ -157,3 +158,4 @@ $resultTshirts = mysqli_query($conn, $queryTshirts);
 </body>
 
 </html>
+<!-- womens wear end -->

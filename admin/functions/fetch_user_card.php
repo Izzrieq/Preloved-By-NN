@@ -1,3 +1,4 @@
+<!-- fetch user card func start -->
 <?php
 include '../../config/conn.php';
 
@@ -33,3 +34,4 @@ if (isset($_GET['user_id'])) {
 } else {
     echo "<p>Invalid request.</p>";
 }
+//fetch user card func end

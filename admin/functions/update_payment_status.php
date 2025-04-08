@@ -1,3 +1,4 @@
+<!-- update payment status function start -->
 <?php
 include '../../config/conn.php';
 error_reporting(E_ALL);
@@ -92,3 +93,4 @@ try {
 }
 
 mysqli_close($conn);
+//update payment status function end

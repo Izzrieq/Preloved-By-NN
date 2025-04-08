@@ -1,3 +1,4 @@
+<!-- contact us start -->
 <?php
 session_start();
 include 'components/nav.php';
@@ -140,3 +141,4 @@ include 'components/nav.php';
 </body>
 
 </html>
+<!-- contact us end -->

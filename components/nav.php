@@ -14,7 +14,6 @@
             background-color: #F8F9FA;
             color: #333;
             padding-top: 70px;
-            /* Prevents navbar overlap */
         }
 
         nav {

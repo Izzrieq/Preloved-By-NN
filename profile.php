@@ -1,3 +1,4 @@
+<!-- profile start -->
 <?php
 session_start();
 include 'components/nav.php';
@@ -270,3 +271,4 @@ $resultCards = mysqli_query($conn, $queryCards);
 </body>
 
 </html>
+<!-- profile end -->

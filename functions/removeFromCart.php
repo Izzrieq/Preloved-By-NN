@@ -1,3 +1,4 @@
+remove from cart func start
 <?php
 session_start();
 include '../config/conn.php';
@@ -20,3 +21,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cart_id'])) {
 } else {
     echo json_encode(["success" => false, "error" => "Invalid request"]);
 }
+//remove from cart func end

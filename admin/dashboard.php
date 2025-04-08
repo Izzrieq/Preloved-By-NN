@@ -1,3 +1,4 @@
+<!-- dashboard start -->
 <?php
 include '../config/conn.php';
 session_start();
@@ -96,3 +97,4 @@ while ($row = mysqli_fetch_assoc($salesPerformanceResult)) {
 </body>
 
 </html>
+<!-- dashboard end -->

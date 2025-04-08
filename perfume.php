@@ -1,3 +1,4 @@
+<!-- perfume start -->
 <?php
 session_start();
 include 'components/nav.php';
@@ -192,3 +193,4 @@ $resultTshirts = mysqli_query($conn, $queryTshirts);
 </body>
 
 </html>
+<!-- perfume end -->

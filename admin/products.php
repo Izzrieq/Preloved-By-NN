@@ -1,3 +1,4 @@
+<!-- product start -->
 <?php
 include '../config/conn.php';
 error_reporting(E_ALL);
@@ -97,3 +98,4 @@ while ($product = mysqli_fetch_assoc($productResult)) {
 </body>
 
 </html>
+<!-- product end -->

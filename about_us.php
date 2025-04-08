@@ -1,3 +1,4 @@
+<!-- about us php start -->
 <?php
 session_start();
 include 'components/nav.php';
@@ -154,3 +155,4 @@ include 'components/nav.php';
 <?php include 'components/footer.php'; ?>
 
 </html>
+<!-- about us php end -->

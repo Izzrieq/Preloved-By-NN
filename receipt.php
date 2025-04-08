@@ -1,3 +1,4 @@
+<!-- receipt start -->
 <?php
 session_start();
 include 'config/conn.php';
@@ -53,3 +54,4 @@ if (!$payment) {
 </body>
 
 </html>
+<!-- receipt end -->

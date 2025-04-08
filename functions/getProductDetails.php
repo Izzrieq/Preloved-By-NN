@@ -1,3 +1,4 @@
+<!-- get product function start -->
 <?php
 include '../config/conn.php';
 
@@ -38,3 +39,4 @@ if (isset($_GET['product_id'])) {
 } else {
     echo json_encode(["error" => "Invalid request"]);
 }
+// get profuct function end

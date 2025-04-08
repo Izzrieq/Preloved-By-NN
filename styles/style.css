@@ -1,3 +1,4 @@
+/* css start */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 *{
@@ -14,7 +15,7 @@ body{
 .hero-section {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full screen height */
+    height: 100vh; 
     background: url('../assets/promo-1.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
@@ -27,14 +28,14 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark opacity */
+    background: rgba(0, 0, 0, 0.5); 
     top: 0;
     left: 0;
 }
 .edp-section {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full screen height */
+    height: 100vh;
     background: url('../assets/promo-2.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
@@ -47,7 +48,7 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark opacity */
+    background: rgba(0, 0, 0, 0.5); 
     top: 0;
     left: 0;
 }
@@ -66,27 +67,26 @@ p {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
-/* Style for the Modal */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed position */
-    z-index: 9999; /* On top of all other content */
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    overflow: auto; /* Enable scrolling if the modal is too big */
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto; 
 }
 
 /* Modal content */
 .modal-content {
     background-color: white;
-    margin: 15% auto; /* Center the modal */
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Set width of modal */
-    max-width: 400px; /* Maximum width for better responsiveness */
+    width: 80%; 
+    max-width: 400px; 
     border-radius: 10px;
 }
 /* Custom Alert Modal */
@@ -1161,3 +1161,4 @@ body {
         margin-bottom: 20px;
     }
 }
+/* css end */

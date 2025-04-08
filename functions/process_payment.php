@@ -1,3 +1,4 @@
+<!-- process payment func start -->
 <?php
 session_start();
 include '../config/conn.php';
@@ -51,3 +52,4 @@ if ($stmt) {
 }
 
 mysqli_close($conn);
+//process payment funct end

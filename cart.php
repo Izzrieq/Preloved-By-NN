@@ -1,3 +1,4 @@
+<!-- cart php start -->
 <?php
 session_start();
 include 'config/conn.php';
@@ -271,3 +272,4 @@ $resultCart = mysqli_query($conn, $queryCart);
 </body>
 
 </html>
+<!-- cart php end -->

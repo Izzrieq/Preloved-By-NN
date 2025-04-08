@@ -1,3 +1,4 @@
+<!-- product add start -->
 <?php
 include '../config/conn.php';
 error_reporting(E_ALL);
@@ -94,3 +95,4 @@ VALUES (?, ?, ?, ?, ?, ?, ?)";
 </body>
 
 </html>
+<!-- product add end -->

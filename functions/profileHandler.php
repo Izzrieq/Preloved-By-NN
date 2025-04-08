@@ -1,3 +1,4 @@
+<!-- profile handler func start -->
 <?php
 session_start();
 include '../config/conn.php';
@@ -101,3 +102,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 }
+//profile handler func end

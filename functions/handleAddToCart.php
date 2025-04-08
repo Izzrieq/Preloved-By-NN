@@ -1,12 +1,10 @@
+<!-- handle add to cart funct start -->
 <?php
 session_start();
 include '../config/conn.php';
-
-// Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Ensure JSON response format
 header('Content-Type: application/json');
 
 // Check if user is logged in
@@ -31,7 +29,6 @@ if (!$product_id || !$quantity) {
 $product_id = mysqli_real_escape_string($conn, $product_id);
 $quantity = intval($quantity);
 
-// ✅ Check the category of the product
 $categoryQuery = "SELECT category_id, product_price FROM products WHERE product_id = '$product_id'";
 $categoryResult = mysqli_query($conn, $categoryQuery);
 
@@ -44,7 +41,6 @@ $categoryRow = mysqli_fetch_assoc($categoryResult);
 $category_id = $categoryRow['category_id'];
 $product_price = $categoryRow['product_price']; // Get price from `products` table
 
-// ✅ Set default size to "S" for category 4, 5, 6
 if (in_array($category_id, [4, 5, 6]) && empty($size)) {
     $size = "S";
 }
@@ -69,7 +65,6 @@ if (in_array($category_id, [4, 5, 6])) {
     $price = $row['price'];  // Store price from database
 }
 
-// ✅ Check if the item is already in the cart
 $checkCartQuery = "SELECT * FROM cart WHERE user_id = '$user_id' AND product_id = '$product_id' AND size = '$size'";
 $checkResult = mysqli_query($conn, $checkCartQuery);
 
@@ -79,7 +74,6 @@ if (!$checkResult) {
 }
 
 if (mysqli_num_rows($checkResult) > 0) {
-    // ✅ Update existing cart item
     $updateQuery = "UPDATE cart SET quantity = quantity + $quantity, price = '$price' WHERE user_id = '$user_id' AND product_id = '$product_id' AND size = '$size'";
     if (mysqli_query($conn, $updateQuery)) {
         echo json_encode(['success' => true, 'message' => 'Cart updated successfully.']);
@@ -87,7 +81,6 @@ if (mysqli_num_rows($checkResult) > 0) {
         echo json_encode(['success' => false, 'message' => 'Error updating cart: ' . mysqli_error($conn)]);
     }
 } else {
-    // ✅ Insert new cart item
     $added_at = date('Y-m-d H:i:s');
     $insertQuery = "INSERT INTO cart (user_id, product_id, quantity, size, price, added_at) VALUES ('$user_id', '$product_id', '$quantity', '$size', '$price', '$added_at')";
 
@@ -100,3 +93,4 @@ if (mysqli_num_rows($checkResult) > 0) {
 
 // Close DB connection
 mysqli_close($conn);
+//handle add to cart funct end
